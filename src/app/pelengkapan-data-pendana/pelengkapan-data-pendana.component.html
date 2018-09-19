@@ -1,0 +1,356 @@
+<head><script src="//static.codepen.io/assets/editor/live/console_runner-ce3034e6bde3912cc25f83cccb7caa2b0f976196f2f2d52303a462c826d54a73.js"></script><script src="//static.codepen.io/assets/editor/live/css_live_reload_init-e9c0cc5bb634d3d14b840de051920ac153d7d3d36fb050abad285779d7e5e8bd.js"></script><meta charset="UTF-8"><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico"><link rel="mask-icon" type="" href="//static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111"><link rel="canonical" href="https://codepen.io/nickhaskell/pen/HoGsm">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<style class="cp-pen-styles">@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+body {
+  
+  font-size: 100%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+div, textarea, input {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 510px;
+  min-width: 324px;
+  margin: 50px auto 0px;
+  background-color: #fff;
+  border: 1px solid #cfcfcf;
+  border-bottom: 3px solid #ccc;
+}
+
+.row {
+  width: 100%;
+  margin: 0 0 1em 0;
+  padding: 0 2.5em;
+}
+.row.header {
+  padding: 1.5em 2.5em;
+  border-bottom: 1px solid #ccc;
+  background: url(https://images2.imgbox.com/a5/2e/m3lRbCCA_o.jpg) left -80px;
+  color: #fff;
+}
+.row.body {
+  padding: .5em 2.5em 1em;
+}
+
+.pull-right {
+  float: right;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  display: inline-block;
+  font-weight: 100;
+  font-size: 2.8125em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 0 0 0.1em 0;
+  padding: 0 0 0.4em 0;
+}
+
+h3 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1.25em;
+  margin: 1em 0 0.4em 0;
+}
+
+.btn {
+  font-size: 1.0625em;
+  display: inline-block;
+  padding: 0.74em 1.5em;
+  margin: 1.5em 0 0;
+  color: #fff;
+  border-width: 0 0 0 0;
+  border-bottom: 5px solid;
+  text-transform: uppercase;
+  background-color: #b3b3b3;
+  border-bottom-color: #8c8c8c;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+.btn:hover {
+  background-color: #bfbfbf;
+}
+.btn.btn-submit {
+  background-color: #4f6fad;
+  border-bottom-color: #374d78;
+}
+.btn.btn-submit:hover {
+  background-color: #5f7db6;
+}
+
+form {
+  max-width: 100%;
+  display: block;
+}
+form ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+form ul li {
+  margin: 0 0 0.25em 0;
+  clear: both;
+  display: inline-block;
+  width: 100%;
+}
+form ul li:last-child {
+  margin: 0;
+}
+form ul li p {
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+form ul li p.right {
+  float: right;
+}
+form ul li .divider {
+  margin: 0.5em 0 0.5em 0;
+  border: 0;
+  height: 1px;
+  width: 100%;
+  display: block;
+  background-color: #4f6fad;
+  background-image: linear-gradient(to right, #ee9cb4, #4f6fad);
+}
+form ul li .req {
+  color: #ee9cb4;
+}
+form label {
+  display: block;
+  margin: 0 0 0.5em 0;
+  color: #4f6fad;
+  font-size: 1em;
+}
+form input {
+  margin: 0 0 0.5em 0;
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  color: #555;
+  font-size: 1em;
+}
+form textarea {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  width: 100%;
+  color: #555;
+}
+form small {
+  color: #4f6fad;
+  margin: 0 0 0 0.5em;
+}
+
+@media only screen and (max-width: 480px) {
+  .pull-right {
+    float: none;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  label {
+    width: 100%;
+    display: inline-block;
+    float: left;
+    clear: both;
+  }
+
+  li, p {
+    width: 100%;
+  }
+
+  input.btn {
+    margin: 1.5em 0 0.5em;
+  }
+
+  h1 {
+    font-size: 2.25em;
+  }
+
+  h3 {
+    font-size: 1.125em;
+  }
+
+  li small {
+    display: none;
+  }
+}
+</style></head><body>
+
+<div>
+
+  <div class="row body">
+    <h1> Pelengkapan Data Pendana</h1>
+    <form action="#">
+      <ul>
+        <li>
+          <p>
+            <label for="tipe_pendana">Tipe Pendana <span class="req">*</span></label>
+            <select name="tipe_pendana">
+              <option value="individual">Individual</option>
+              <option value="corporate">Corporate</option>
+            </select>
+          </p>
+        </li>
+        <li>
+          <p>
+            <label for="Kewarganegaraan">Kewarganegaraan <span class="req">*</span></label>
+            <select name="Kewarganegaraan">
+              <option value="volvo">Indonesia</option>
+              <option value="saab">Malaysia</option>
+              <option value="saab">China</option>
+              <option value="saab">Singapore</option>
+              <option value="saab">United Kingdom</option>
+              <option value="saab">Amerika</option>
+            </select>
+          </p>
+        </li>
+        <li>
+          <p class="left">
+            <label for="sapaan">Sapaan</label>
+            <select name="sapaan">
+              <option value="volvo">Mr</option>
+              <option value="saab">Mrs</option>
+            </select>
+
+          </p>
+
+          <p class="pull-right">
+            <label for="nama_lengkap">Nama Lengkap</label>
+            <input name="nama_lengkap" placeholder="John Doe" type="text">
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <label for="email">Email <span class="req">*</span></label>
+            <input name="email" placeholder="test.email@danaonline.id" type="email">
+          </p>
+          <p>
+            <label for="email">No Handphone <span class="req">*</span></label>
+            <input name="email" placeholder="0813912732133" type="email">
+          </p>
+        </li>
+        <li>
+          <p>
+            <label for="email">Tempat Lahir <span class="req">*</span></label>
+            <input name="email">
+          </p>
+          <p>
+            <label for="email">Tanggal Lahir <span class="req">*</span></label>
+            <input name="email"  type="date">
+          </p>
+        </li>
+        <li>
+          <p>
+            <label for="email"> No KTP <span class="req">*</span></label>
+            <input name="email">
+          </p>
+          <p>
+            <label for="email"> Upload KTP <span class="req">*</span></label>
+            <input class="btn" value="Upload" type="submit">
+          </p>
+        </li>
+        <li>
+          <p>
+            <label for="email">No NPWP <span class="req">*</span></label>
+            <input name="email">
+          </p>
+          <p>
+            <label for="email"> Upload NPWP <span class="req">*</span></label>
+            <input class="btn" value="Upload" type="submit">
+          </p>
+        </li>
+
+        <li>
+          <label for="comments">Alamat Sesuai KTP</label>
+          <textarea cols="46" rows="3" name="comments"></textarea>
+        </li>
+
+        <li>
+          <p>
+            <label for="email">Provinsi <span class="req">*</span></label>
+            <select name="sapaan">
+              <option value="volvo">NAD</option>
+              <option value="saab">Sumatera Utara</option>
+              <option value="volvo">Sumatera Barat</option>
+              <option value="saab">Jambi</option>
+              <option value="volvo">Sumatera Selatan</option>
+              <option value="saab">Bengkulu</option>
+              <option value="volvo">DKI Jakarta</option>
+              <option value="saab">Jawa Barat</option>
+            </select>
+          </p>
+          <p>
+            <label for="email">Kota <span class="req">*</span></label>
+            <select name="sapaan">
+              <option value="volvo">Medan</option>
+              <option value="saab">Jakarta</option>
+              <option value="volvo">Bandung</option>
+              <option value="saab">Surabaya</option>
+              <option value="volvo">Denpasar</option>
+              <option value="saab">Balige</option>
+            </select>
+          </p>
+          <p>
+            <label for="email">Kecamatan<span class="req">*</span></label>
+            <select name="sapaan">
+              <option value="volvo">Laguboti</option>
+              <option value="saab">Sarimatondang</option>
+              <option value="saab">X</option>
+              <option value="saab">Y</option>
+            </select>
+          </p>
+        </li>
+        <li>
+          <p>
+            <label for="email">Kode Pos <span class="req">*</span></label>
+            <input type="Text">
+          </p>
+
+        </li>
+        <li>
+          <p>
+            <label for="email">Nama Bank <span class="req">*</span></label>
+            <select name="sapaan">
+              <option value="volvo">BNI</option>
+              <option value="saab">BCA</option>
+              <option value="volvo">BRI</option>
+              <option value="saab">Panin Bank</option>
+              <option value="volvo">BTN</option>
+              <option value="saab">Bank DKI</option>
+              <option value="volvo">MyBank</option>
+              <option value="saab">Danamon</option>
+            </select>
+          </p>
+          <p>
+            <label for="email">Nomor Rekening <span class="req">*</span></label>
+            <input type="text">
+          </p>
+          <p>
+            <label for="email">Pemilik Rekening<span class="req">*</span></label>
+            <input type="text">
+          </p>
+        </li>
+        <li><div class="divider"></div></li>
+        <li>
+          <input class="btn btn-submit" value="Submit" type="submit">
+          <input class="btn" value="Batal" type="submit">
+
+        </li>
+
+      </ul>
+    </form>
+  </div>
+</div>
+
+</body>
